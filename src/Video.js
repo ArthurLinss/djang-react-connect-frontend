@@ -1,3 +1,6 @@
+import Collapsible from 'react-collapsible';
+import { FaUserPlus, FaArrowDown } from "react-icons/fa";
+
 
 export const VideoYoutube = (props) => {
     const { url } = props;

@@ -3,10 +3,10 @@ import React from "react";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import {Event} from "./Event.js"
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'; 
+
 
 let color1 = "#0f283a"; // #ffd700";
-
-
 let server_url = "http://localhost:8000"
 
 class App extends React.Component {
@@ -45,5 +45,4 @@ class App extends React.Component {
 }
 
 export default App;
-
 
