@@ -5,6 +5,7 @@ import "react-vertical-timeline-component/style.min.css";
 import {Event} from "./Event.js"
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'; 
 import NavbarApp from "./navbarTest.js";
+import FooterApp from "./footerTest.js";
 import "./Styles/main.css"
 
 let color1 = "#0f283a"; // #ffd700";
@@ -37,6 +38,7 @@ class App extends React.Component {
 
       
         <NavbarApp/>
+
        
 
         <div>
@@ -46,7 +48,14 @@ class App extends React.Component {
             ))}
           </VerticalTimeline>
         </div>
+
+        <FooterApp/>
+
+
+
       </div>
+
+   
     );
   }
 }

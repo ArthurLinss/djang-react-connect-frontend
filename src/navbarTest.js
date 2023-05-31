@@ -4,7 +4,6 @@ import Navibar from "./Components/Navbar";
 function NavbarApp() {
     return (
         <React.Fragment>
-
             <Navibar/>
         </React.Fragment>
     );
