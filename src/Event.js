@@ -1,6 +1,6 @@
 import { VideoYoutube } from "./Video.js";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
-import { FaUserPlus, FaArrowDown, FaFileVideo,FaExternalLinkAlt } from "react-icons/fa";
+import { FaUserPlus, FaArrowDown, FaFileVideo, FaExternalLinkAlt } from "react-icons/fa";
 
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -53,7 +53,7 @@ export const Event = (props) => {
         <p> </p>
         {videosection}
         <p> </p>
-        <SourceCard output={output}/>
+        <SourceCard output={output} />
       </VerticalTimelineElement>
     );
   }
@@ -61,10 +61,10 @@ export const Event = (props) => {
     return (
       <VerticalTimelineElement
         className="vertical-timeline-element"
-        contentStyle={{ background: color_black, color: color_white }}
+        contentStyle={{ background: color2, color: color2 }}
         date={output.date}
         layout={"3-columns"}
-        iconStyle={{ background: color_black, color: color_white }}
+        iconStyle={{ background: color2, color: color2 }}
         /*  icon={<FaUserPlus />} */
         //position="left"
       >
@@ -77,28 +77,24 @@ export const Event = (props) => {
 export const QuoteCard = (props) => {
   const { output } = props;
   return (
-    <Card>
+    <Card class="card bg-light border-dark mb-3">
       {/* <Card.Img className="BeerListItem-img" variant="top" src={logo} /> */}
       <Card.Body>
         <Card.Title> </Card.Title>
         <Card.Text>
-          <div>
-            <p style={{ fontFamily: "Fantasy" }}>
-              {" "}
-              <b> "{output.text}" </b>{" "}
-            </p>
+          <div class="card-text">
+            <b> "{output.text}" </b>{" "}
           </div>
-          <div style={{ float: "right" }}>
-            <p>
-              {" "}
-              <i> {output.author} </i>{" "}
-            </p>
+          </Card.Text>
+        <Card.Text>
+          <div class="card-text" style={{ float: "right" }}>
+            <i> {output.author} </i>
           </div>
-          <p> </p>
-
-          <div style={{ float: "left" }}>
-            <p> {output.context} </p>
-          </div>
+        </Card.Text>
+        <Card.Text>
+        <div class="card-footer text-muted  bg-transparent" style={{ float: "left" }}>
+          <p> {output.context} </p>
+        </div>
         </Card.Text>
       </Card.Body>
     </Card>
@@ -106,23 +102,22 @@ export const QuoteCard = (props) => {
 };
 
 export const SourceCard = (props) => {
-  const {output} = props;
+  const { output } = props;
   return (
     <Collapsible trigger={["", <FaExternalLinkAlt />]}>
-    <Card>
-      {/* <Card.Img className="BeerListItem-img" variant="top" src={logo} /> */}
-      <Card.Body>
-        <Card.Title> {output.sources_link} </Card.Title>
-        <Card.Text>
-          <div>
-            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", margin: 20 }}>
-            <iframe width="560" height="315" src={output.sources_link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          </div>
-        </Card.Text>
-      </Card.Body>
-    </Card>
+      <Card>
+        {/* <Card.Img className="BeerListItem-img" variant="top" src={logo} /> */}
+        <Card.Body>
+          <Card.Title> {output.sources_link} </Card.Title>
+          <Card.Text>
+            <div>
+              <div style={{ display: "flex", justifyContent: "center", alignItems: "center", margin: 20 }}>
+                <iframe width="560" height="315" src={output.sources_link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            </div>
+          </Card.Text>
+        </Card.Body>
+      </Card>
     </Collapsible>
   );
-
-}
+};

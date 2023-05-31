@@ -4,12 +4,13 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 import "react-vertical-timeline-component/style.min.css";
 import {Event} from "./Event.js"
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'; 
-
+import NavbarApp from "./navbarTest.js";
+import "./Styles/main.css"
 
 let color1 = "#0f283a"; // #ffd700";
 let server_url = "http://localhost:8000"
 
-class App extends React.Component {
+class App extends React.Component { 
   state = { details: [] };
 
   componentDidMount() {
@@ -27,11 +28,17 @@ class App extends React.Component {
 
   render() {
     return (
-      <div
+      
+      <div    
         style={{
           backgroundColor: color1,
         }}
       >
+
+      
+        <NavbarApp/>
+       
+
         <div>
           <VerticalTimeline>
             {this.state.details.map((output, id) => (
