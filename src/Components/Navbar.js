@@ -23,9 +23,9 @@ function Navibar() {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="navbar-fixed-top">
           <NavDropdown title="Areas" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="/ukraine">Ukraine</NavDropdown.Item>
-            <NavDropdown.Divider />
+            <NavDropdown.Item href="/ukraine">Ukraine War</NavDropdown.Item>
             <NavDropdown.Item href="/ww2">World War II</NavDropdown.Item>
+            <NavDropdown.Item href="/vietnamwar">Vietnam War</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link href="/blog">Blog</Nav.Link>
           <NavDropdown title="More" id="collasible-nav-dropdown">
