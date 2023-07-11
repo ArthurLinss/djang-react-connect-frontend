@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ramonak/react-progress-bar": "^5.0.3",
+    "@syncfusion/ej2-react-progressbar": "^22.1.36",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -16,11 +18,13 @@
     "react-collapsed": "^4.0.2",
     "react-collapsible": "^2.10.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.9.0",
+    "react-icons": "^4.10.1",
+    "react-progress-bar": "^0.1.0",
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
     "react-scroll-to-top": "^3.0.0",
     "react-switch": "^7.0.0",
+    "use-sound": "^4.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

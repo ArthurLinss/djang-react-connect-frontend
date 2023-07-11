@@ -10,7 +10,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import AboutMe from "../About.js";
 
 function Navibar() {
   return (
@@ -28,6 +27,7 @@ function Navibar() {
             <NavDropdown.Item href="/vietnamwar">Vietnam War</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link href="/blog">Blog</Nav.Link>
+          <Nav.Link href="/Music">Music</Nav.Link>
           <NavDropdown title="More" id="collasible-nav-dropdown">
             <NavDropdown.Item href="/about">About</NavDropdown.Item>
             <NavDropdown.Divider />
